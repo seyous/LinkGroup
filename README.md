@@ -4,8 +4,8 @@
 
 
 ### Clone
-- clone on https://github.com/seyous/LinkGroup
-- All files are contained in LinkGroup folder, please ignore other folders.
+- Clone on https://github.com/seyous/LinkGroup
+- All files are contained in LinkGroup folder.
 
 Or
 
@@ -18,11 +18,7 @@ Get the link on github
 
 
 ### Installing
-* install all the nuget package by going to reference and add nuget Packages
-
-
-### To Run the tests
-* Please Double click Reports folder and double click Reportgenerator bat file. it will run the test and generate html report, xmlreport and a textreport inside the Reportfiles folder.
+* To Install all the nuget packages, Right click project and nuget packages
 
 
 
