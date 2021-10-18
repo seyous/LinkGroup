@@ -27,7 +27,7 @@ To Run the tests
 
 
 Break down into end to end tests
-*** There are 5 test. 1. for smoke test using 1 scenarios, 2. for search results using 1 scenarios.3. for investment managers using  3 Scenario.
+--- There are 5 test. 1. for smoke test using 1 scenarios, 2. for search results using 1 scenarios.3. for investment managers using  3 Scenario.
 which are 5 featues files in the features folder. To run the test in Visual Studio click Run All on the Test Explorer.
 
 
