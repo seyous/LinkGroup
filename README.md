@@ -10,7 +10,7 @@
 Or
 
 Get the link on github
---https://github.com/seyous/repos/tree/master/LinkGroup
+--https://github.com/seyous/LinkGroup
 
 
 ### Getting Started
