@@ -2,6 +2,8 @@
 
 ### The project was developed using BDD framework with .NET using speclow.
 
+*Name:  OLUSEYI OJO
+*Date of Completion: 18/04/21 
 
 ### Clone
 - Clone https://github.com/seyous/LinkGroup
