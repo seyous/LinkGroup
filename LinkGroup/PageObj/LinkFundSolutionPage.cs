@@ -36,7 +36,7 @@ namespace LinkGroup.PageObj
                 int i = 0;
                 foreach (IWebElement element in elements)
                 {
-                     
+
                     if (element.Text.Contains(searchInvestors))
                     {
                         bool displayedObject = element.Displayed;

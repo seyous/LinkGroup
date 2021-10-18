@@ -9,7 +9,7 @@ using TechTalk.SpecFlow;
 namespace LinkGroup.Util
 {
     [Binding]
-   public sealed class Hooks
+    public sealed class Hooks
     {
         public static ChromeDriver driver;
 
@@ -26,7 +26,8 @@ namespace LinkGroup.Util
             {
 
                 throw;
-            }        }
+            }
+        }
 
         [AfterScenario]
         public void AfterScenario()

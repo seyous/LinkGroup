@@ -16,13 +16,13 @@ namespace LinkGroup.StepDefinition
         private readonly LinkGroupPage _linkGroupPage;
         private readonly LinkFundSolutionPage _linkFundSolutionPage;
 
-        public LinkGroupSteps(LinkGroupPage linkGroupPage, LinkFundSolutionPage linkFundSolutionPage )
+        public LinkGroupSteps(LinkGroupPage linkGroupPage, LinkFundSolutionPage linkFundSolutionPage)
         {
             _linkGroupPage = linkGroupPage;
             _linkFundSolutionPage = linkFundSolutionPage;
         }
 
-        
+
         [When(@"I open the home page")]
         public void WhenIOpenTheHomePage()
         {

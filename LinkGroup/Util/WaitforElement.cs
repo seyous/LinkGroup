@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LinkGroup.Util
 {
-  public static  class WaitforElement
+    public static class WaitforElement
     {
         public static IWebElement webElement;
 

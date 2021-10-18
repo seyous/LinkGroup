@@ -12,8 +12,6 @@ namespace LinkGroup.PageObj
 {
     public class LinkGroupPage
     {
-        private object until;
-
         IWebElement acceptcoookieButton => Hooks.driver.FindElementByCssSelector("#btnAccept");
         IWebElement searchButton => Hooks.driver.FindElementByCssSelector("#TN-search");
 
@@ -41,22 +39,19 @@ namespace LinkGroup.PageObj
 
         public void Entertext(string text)
         {
-            WebDriverWait wait = new WebDriverWait(Hooks.driver, TimeSpan.FromSeconds(10)) ;
+            WebDriverWait wait = new WebDriverWait(Hooks.driver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.ElementToBeClickable(searchButton));
             searchBox.SendKeys(text);
             WaitforElement.ImplicitWaitforElement();
             searchBox.Click();
             searchBoxButton.Click();
-         }
+        }
 
         public string Searchtext()
         {
-            string result = searchResult.Text.Replace("\r\n\"",  "").Trim(new char[] {'\"'});
+            string result = searchResult.Text.Replace("\r\n\"", "").Trim(new char[] { '\"' });
             return result;
         }
-
-
-        
     }
 }
 
