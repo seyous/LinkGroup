@@ -4,7 +4,7 @@
 
 
 ### Clone
-- Clone on https://github.com/seyous/LinkGroup
+- Clone https://github.com/seyous/LinkGroup
 - All files are contained in LinkGroup folder.
 
 Or
@@ -14,11 +14,11 @@ Get the link on github
 
 
 ### Getting Started
-* To access the project in Visual Studio install the following nuget package on visual studio, specflow, Nunit, Selenium.webdriver, selenium.support, nunitt3TestAdapter, nunit.console, nunit.runner, specflow.nunit, selenium.webdriver.chromedriver, Specflow.Tools.Msbuild.Generation
+* To access the project in Visual Studio install the following nuget package on visual studio, Specflow, Nunit, Selenium.webdriver, Selenium.support, Nunitt3TestAdapter, Nunit.console, Nunit.runner, Specflow.nunit, Selenium.webdriver.Chromedriver, Specflow.Tools.Msbuild.Generation
 
 
 ### Installing
-* To Install all the nuget packages, Right click project and nuget packages
+* To Install all the nuget packages, right click project and nuget packages
 
 
 
