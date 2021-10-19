@@ -26,16 +26,16 @@ namespace LinkGroup.StepDefinition
         [When(@"I open the home page")]
         public void WhenIOpenTheHomePage()
         {
-            Hooks.driver.Navigate().GoToUrl("https://www.linkgroup.eu/");
+            Hooks.Driver.Navigate().GoToUrl("https://www.linkgroup.eu/");
             WaitforElement.ImplicitWaitforElement();
-            Hooks.driver.Manage().Window.Maximize();
+            Hooks.Driver.Manage().Window.Maximize();
         }
 
         [Then(@"page is displayed")]
         public void ThenPageIsDisplayed()
         {
-            String CurrentURL = Hooks.driver.Url;
-            WaitforElement.wait();
+            String CurrentURL = Hooks.Driver.Url;
+            WaitforElement.Wait();
             Assert.AreEqual(CurrentURL, "https://www.linkgroup.eu/");
 
         }
@@ -43,41 +43,41 @@ namespace LinkGroup.StepDefinition
         [Given(@"I have opened the page")]
         public void GivenIHaveOpenedThePage()
         {
-            Hooks.driver.Navigate().GoToUrl("https://www.linkgroup.eu/");
+            Hooks.Driver.Navigate().GoToUrl("https://www.linkgroup.eu/");
             WaitforElement.ImplicitWaitforElement();
-            Hooks.driver.Manage().Window.Maximize();
+            Hooks.Driver.Manage().Window.Maximize();
 
         }
 
         [Given(@"I have agreed to the cookie policy")]
         public void GivenIHaveAgreedToTheCookiePolicy()
         {
-            _linkGroupPage.Acceptcookie();
+            _linkGroupPage.AcceptCookie();
         }
 
         [When(@"I search for ""(.*)""")]
         public void WhenISearchFor(string text)
         {
-            _linkGroupPage.Clicksearchbutton();
+            _linkGroupPage.ClickSearchButton();
             WaitforElement.ImplicitWaitforElement();
-            _linkGroupPage.Entertext(text);
+            _linkGroupPage.EnterText(text);
 
         }
 
         [Then(@"the search results are displayed")]
         public void ThenTheSearchResultsAreDisplayed()
         {
-            Executescript.JavascriptexecutorCoordinate();
-            WaitforElement.wait();
-            Assert.AreEqual("You searched for:Leeds", _linkGroupPage.Searchtext());
+            Executescript.JavascriptExecutorCoordinate();
+            WaitforElement.Wait();
+            Assert.AreEqual("You searched for:Leeds", _linkGroupPage.SearchText());
         }
 
         [Given(@"I have opened the Found Solution page")]
         public void GivenIHaveOpenedTheFoundSolutionPage()
         {
             WaitforElement.ImplicitWaitforElement();
-            Hooks.driver.Navigate().GoToUrl("https://www.linkfundsolutions.co.uk/");
-            Hooks.driver.Manage().Window.Maximize();
+            Hooks.Driver.Navigate().GoToUrl("https://www.linkfundsolutions.co.uk/");
+            Hooks.Driver.Manage().Window.Maximize();
 
         }
 
@@ -85,7 +85,7 @@ namespace LinkGroup.StepDefinition
         public void WhenIViewFunds()
         {
             WaitforElement.ImplicitWaitforElement();
-            _linkFundSolutionPage.Viewfunds();
+            _linkFundSolutionPage.ViewFunds();
         }
 
 
@@ -93,8 +93,8 @@ namespace LinkGroup.StepDefinition
         [Then(@"I can select the investment managers for ""(.*)"" investors")]
         public void ThenICanSelectTheInvestmentManagersForInvestors(string p0)
         {
-            WaitforElement.wait();
-            Assert.IsTrue(_linkFundSolutionPage.Investorsdisplayed(p0));
+            WaitforElement.Wait();
+            Assert.IsTrue(_linkFundSolutionPage.InvestorsDisplayed(p0));
         }
 
 

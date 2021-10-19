@@ -11,15 +11,15 @@ namespace LinkGroup.Util
     [Binding]
     public sealed class Hooks
     {
-        public static ChromeDriver driver;
+        public static ChromeDriver Driver;
 
         [BeforeScenario]
-        public static void BeforeTest()
+        public static void BeforeScenario()
         {
             try
             {
-                driver = new ChromeDriver();
-                WaitforElement.wait();
+                Driver = new ChromeDriver();
+                WaitforElement.Wait();
 
             }
             catch (Exception)
@@ -32,7 +32,7 @@ namespace LinkGroup.Util
         [AfterScenario]
         public void AfterScenario()
         {
-            driver.Dispose();
+            Driver.Dispose();
         }
     }
 }

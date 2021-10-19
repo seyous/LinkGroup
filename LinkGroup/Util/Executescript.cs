@@ -9,9 +9,9 @@ namespace LinkGroup.Util
 {
     public static class Executescript
     {
-        public static void JavascriptexecutorCoordinate()
+        public static void JavascriptExecutorCoordinate()
         {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)Hooks.driver;
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Hooks.Driver;
             js.ExecuteScript("window.scrollBy(0, 300)");
         }
     }

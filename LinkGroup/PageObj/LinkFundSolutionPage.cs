@@ -11,28 +11,28 @@ namespace LinkGroup.PageObj
 {
     public class LinkFundSolutionPage
     {
-        Actions action = new Actions(Hooks.driver);
-        IWebElement fundsMenu => Hooks.driver.FindElementById("navItem-funds");
-        IWebElement Investors => Hooks.driver.FindElementByXPath("//*[@id='navItem-funds']/div/div/div[2]/div[1]/ul/li/a");
+        Actions action = new Actions(Hooks.Driver);
+        IWebElement fundsMenu => Hooks.Driver.FindElementById("navItem-funds");
+        IWebElement Investors => Hooks.Driver.FindElementByXPath("//*[@id='navItem-funds']/div/div/div[2]/div[1]/ul/li/a");
 
 
 
-        public void Viewfunds()
+        public void ViewFunds()
         {
-            WaitforElement.wait();
+            WaitforElement.Wait();
             action.MoveToElement(fundsMenu).Build().Perform();
         }
 
 
-        public bool Investorsdisplayed(string searchInvestors)
+        public bool InvestorsDisplayed(string searchInvestors)
         {
 
             try
             {
-                WaitforElement.wait();
+                WaitforElement.Wait();
                 action.MoveToElement(Investors).Perform();
 
-                IList<IWebElement> elements = Hooks.driver.FindElements(By.XPath("//*[@id='navItem-funds']/div/div/div[2]/div[1]/ul/li/a"));
+                IList<IWebElement> elements = Hooks.Driver.FindElements(By.XPath("//*[@id='navItem-funds']/div/div/div[2]/div[1]/ul/li/a"));
                 int i = 0;
                 foreach (IWebElement element in elements)
                 {
