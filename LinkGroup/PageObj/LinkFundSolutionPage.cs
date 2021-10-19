@@ -12,7 +12,7 @@ namespace LinkGroup.PageObj
     public class LinkFundSolutionPage
     {
         Actions action = new Actions(Hooks.Driver);
-        IWebElement fundsMenu => Hooks.Driver.FindElementById("navItem-funds");
+        IWebElement FundsMenu => Hooks.Driver.FindElementById("navItem-funds");
         IWebElement Investors => Hooks.Driver.FindElementByXPath("//*[@id='navItem-funds']/div/div/div[2]/div[1]/ul/li/a");
 
 
@@ -20,7 +20,7 @@ namespace LinkGroup.PageObj
         public void ViewFunds()
         {
             WaitforElement.Wait();
-            action.MoveToElement(fundsMenu).Build().Perform();
+            action.MoveToElement(FundsMenu).Build().Perform();
         }
 
 

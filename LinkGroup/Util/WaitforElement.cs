@@ -21,7 +21,6 @@ namespace LinkGroup.Util
             Hooks.Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(100);
 
         }
-
     }
 }
 

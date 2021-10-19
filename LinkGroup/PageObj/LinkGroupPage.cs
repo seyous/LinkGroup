@@ -12,10 +12,10 @@ namespace LinkGroup.PageObj
 {
     public class LinkGroupPage
     {
-        IWebElement acceptcoookieButton => Hooks.Driver.FindElementByCssSelector("#btnAccept");
-        IWebElement searchButton => Hooks.Driver.FindElementByCssSelector("#TN-search");
+        IWebElement AcceptCookieButton => Hooks.Driver.FindElementByCssSelector("#btnAccept");
+        IWebElement SearchButton => Hooks.Driver.FindElementByCssSelector("#TN-search");
 
-        IWebElement searchBox => Hooks.Driver.FindElementByXPath("//form/input['@name=searchTerm']");
+        IWebElement SearchBox => Hooks.Driver.FindElementByXPath("//form/input['@name=searchTerm']");
 
         IWebElement searchBoxButton => Hooks.Driver.FindElementByXPath("//form/button[contains(text(), Search)]");
 
@@ -26,24 +26,24 @@ namespace LinkGroup.PageObj
         public void AcceptCookie()
         {
             WaitforElement.ImplicitWaitforElement();
-            acceptcoookieButton.Click();
+            AcceptCookieButton.Click();
         }
 
         public void ClickSearchButton()
         {
             Actions actions = new Actions(Hooks.Driver);
-            actions.MoveToElement(searchButton).Click();
+            actions.MoveToElement(SearchButton).Click();
             WaitforElement.ImplicitWaitforElement();
-            searchButton.Click();
+            SearchButton.Click();
         }
 
         public void EnterText(string text)
         {
             WebDriverWait wait = new WebDriverWait(Hooks.Driver, TimeSpan.FromSeconds(10));
-            wait.Until(ExpectedConditions.ElementToBeClickable(searchButton));
-            searchBox.SendKeys(text);
+            wait.Until(ExpectedConditions.ElementToBeClickable(SearchButton));
+            SearchBox.SendKeys(text);
             WaitforElement.ImplicitWaitforElement();
-            searchBox.Click();
+            SearchBox.Click();
             searchBoxButton.Click();
         }
 
